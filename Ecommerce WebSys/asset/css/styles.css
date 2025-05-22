@@ -1,0 +1,150 @@
+body { background: linear-gradient(120deg, #f8f9fa 0%, #f3e6f7 100%); }
+.gradient-text {
+    background: linear-gradient(90deg, #ff4e8e, #a259c6, #ffb86c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.hero-img {
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    background: radial-gradient(circle at 60% 40%, #fff 60%, #a259c6 100%);
+}
+.brand-logos img { max-height: 40px; margin: 0 1.5rem; filter: grayscale(1); opacity: 0.7; }
+.product-card { border-radius: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+.review-card { background: #222; color: #fff; border-radius: 1.5rem; padding: 1.5rem; }
+.avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.nav-link.active { color: #a259c6 !important; } 
+
+/* Styles for Auth Pages (Register/Login) */
+body.auth-page-body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #f8f9fa 0%, #f3e6f7 100%); /* Consistent with landing page body */
+    min-height: 100vh;
+    height: 100vh;
+    display: block;
+    padding: 0;
+}
+
+body.auth-page-body > nav.navbar {
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    z-index: 10;
+}
+
+body.auth-page-body > .auth-container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+    margin: 0;
+}
+
+body.auth-page-body > footer {
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    background: transparent;
+    color: #888;
+    font-size: 0.95rem;
+    border: none;
+    box-shadow: none;
+    z-index: 10;
+}
+
+.auth-center-wrapper {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0;
+}
+
+.auth-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+.form-control:focus {
+    border-color: #a259c6; /* Theme color from landing */
+    box-shadow: 0 0 0 0.25rem rgba(162, 89, 198, 0.25);
+}
+.btn-primary.auth-btn {
+    background-color: #a259c6; /* Theme color */
+    border-color: #a259c6;
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: 500;
+}
+.btn-primary.auth-btn:hover {
+    background-color: #8e4fad;
+    border-color: #8e4fad;
+}
+.is-invalid + .invalid-feedback {
+    display: block; /* Ensure Bootstrap 5 invalid feedback displays */
+}
+/* End of Auth Page Styles */ 
+
+@media (max-width: 600px) {
+    .auth-card {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    body.auth-page-body > .auth-container {
+        min-height: 60vh;
+    }
+} 
+
+/* --- Auth Page Header/Footer Fixes --- */
+html, body.auth-page-body {
+    height: 100%;
+}
+body.auth-page-body {
+    min-height: 100vh;
+    height: 100vh;
+    display: block;
+    padding: 0;
+}
+
+body.auth-page-body > .auth-container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+    margin: 0;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    /* Remove margin for auth pages, keep for others */
+} 
